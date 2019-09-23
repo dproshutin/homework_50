@@ -14,6 +14,22 @@ class Card {
             } else {
                 this.rank = obj.rank;
                 this.suit = obj.suit;
+                switch (this.rank) {
+                    case "J":
+                        this.value = 11;
+                        break;
+                    case "Q":
+                        this.value = 12;
+                        break;
+                    case "K":
+                        this.value = 13;
+                        break;
+                    case "A":
+                        this.value = 14;
+                        break;
+                    default:
+                        this.value = parseInt(this.rank);
+                }
             }
         } catch (e) {
             console.log(`${e.message}`);
@@ -22,7 +38,7 @@ class Card {
     showCard() {
         try {
             if (typeof this.rank !== "undefined" && typeof this.suit !== "undefined" ) {
-                console.log(`${this.rank}${this.suit}`);
+                console.log(`${this.rank}${this.suit}${this.value}`);
             } else {
                 throw new Error("Невозможно показать карту.")
             }

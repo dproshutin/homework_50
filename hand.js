@@ -19,6 +19,7 @@ class Hand {
             let card = JSON.stringify(this.cards[i]);
             console.log(`${i + 1}-я карта: ${card}`);
         }
+        return this.cards;
     }
     replaceCard(number, myDeck) {
         try {

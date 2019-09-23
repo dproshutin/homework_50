@@ -1,4 +1,3 @@
-const Deck = require('./deck.js');
 class Hand {
     constructor() {
         this.cards = [];

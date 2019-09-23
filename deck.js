@@ -28,7 +28,6 @@ class Deck {
             newDeck.push(randomCard);
         }
         this.deck = [...newDeck];
-        console.log(newDeck);
     }
     drawCardFromDeckOnTop() {
         return this.deck.shift();

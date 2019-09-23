@@ -25,7 +25,10 @@ class Hand {
         try {
             if (number >= 1 && number <= this.cards.length) {
                 this.cards[--number] = myDeck.drawCardFromDeckOnTop();
-            } else {
+            } else if (number == 0) {
+                console.log("Это ваш выбор. Продолжаем игру с исходными картами.")
+            }
+            else {
                 throw new Error("В руке нет карты с таким номером.");
             }
         } catch(e) {

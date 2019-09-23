@@ -1,3 +1,4 @@
+const Deck = require('./deck.js');
 class Hand {
     constructor() {
         this.cards = [];
@@ -20,7 +21,7 @@ class Hand {
             console.log(`${i + 1}-я карта: ${card}`);
         }
     }
-    replaceCard(number) {
+    replaceCard(number, myDeck) {
         try {
             if (number >= 1 && number <= this.cards.length) {
                 this.cards[--number] = myDeck.drawCardFromDeckOnTop();
@@ -32,3 +33,4 @@ class Hand {
         }
     }
 }
+module.exports = Hand;

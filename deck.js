@@ -35,6 +35,4 @@ class Deck {
     }
 }
 
-let myDeck = new Deck();
-myDeck.shuffle();
-console.log(myDeck.drawCardFromDeckOnTop());
+module.exports = Deck;

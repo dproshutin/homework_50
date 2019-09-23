@@ -11,14 +11,14 @@ class Checker {
         this.getCardsPerRank(cardsInHand);
 
         if (this.getNumberOfCardsForGivenSuit(5)) {
-            return console.log("Флеш. 6 очков.");
+            console.log("Флеш. 6 очков.");
         }
         if (this.getNumberOfCardsForGivenRank(2) == 3) {
-            return console.log("Тройка. 4 очка.");
+            console.log("Тройка. 4 очка.");
         } else if (this.getNumberOfCardsForGivenRank(2) == 2) {
-            return console.log("Две пары. 3 очка.");
+            console.log("Две пары. 3 очка.");
         } else if (this.getNumberOfCardsForGivenRank(2) == 1) {
-            return console.log("Пара. 2 очка.");
+            console.log("Пара. 2 очка.");
         }
     }
 
